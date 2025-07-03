@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "Bienvenue sur mon serveur Flask hébergé sur Render !"
+
 @app.route('/waifu',  methods=['POST'])
 def waifu():
   data = request.json
